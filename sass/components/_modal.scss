@@ -134,9 +134,6 @@
   transition-property: border-color;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
-  &::placeholder {
-    color: var(--placeholder-color);
-  }
   &:focus {
     border-color: var(--accent-color);
     outline: var(--accent-color);

@@ -12,14 +12,15 @@
   --backdrop-color: rgba(0, 0, 0, 0.2);
   --transition-duration: 250ms;
   --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  --modal-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  --shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   --placeholder-color: rgba(117, 117, 117, 0.5);
   --portfolio-shadow-link: 0px 1px 1px rgba(0, 0, 0, 0.12),
     0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
   --overlay-color: rgba(33, 150, 243, 0.9);
-  --team-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  --color-icon: #afb1b8;
+  --btn-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  --gradient: rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4);
 }
 
 p,
@@ -109,7 +110,7 @@ body {
   min-height: 581px;
   width: 528px;
   background-color: var(--bg-color1);
-  box-shadow: var(--modal-shadow);
+  box-shadow: var(--shadow);
   border-radius: 4px;
   transition-property: transform;
   transition-duration: var(--transition-duration);
@@ -131,8 +132,7 @@ body {
   border: 1px solid #0000001a;
 }
 
-.modal-button:hover > .button-vector,
-.modal-button:focus > .button-vector {
+.modal-button:hover .button-vector, .modal-button:focus .button-vector {
   fill: var(--accent-color);
 }
 
@@ -216,10 +216,6 @@ body {
   transition-timing-function: var(--transition-timing-function);
 }
 
-.form-text::placeholder {
-  color: var(--placeholder-color);
-}
-
 .form-text:focus {
   border-color: var(--accent-color);
   outline: var(--accent-color);
@@ -246,8 +242,8 @@ body {
 }
 
 .form-button:hover, .form-button:focus {
-  background-color: #188ce8;
-  color: #ffffff;
+  background-color: var(--btn-hover-color);
+  color: var(--white-color);
 }
 
 .form-icon-name {
@@ -283,7 +279,7 @@ body {
 
 .form-icon-check {
   margin-right: 7px;
-  border: 2px solid #212121;
+  border: 2px solid var(--primary-text-color);
   border-radius: 2px;
   fill: none;
   transition: border-color var(--transition-duration) var(--transition-timing-function), background-color var(--transition-duration) var(--transition-timing-function), fill var(--transition-duration) var(--transition-timing-function);
@@ -544,7 +540,7 @@ body {
   left: 0;
   padding: 27px;
   background: rgba(47, 48, 58, 0.8);
-  color: #ffffff;
+  color: var(--white-color);
   font-size: 14px;
   line-height: 1.14;
   text-align: center;
@@ -554,7 +550,7 @@ body {
 }
 
 .shadow {
-  box-shadow: var(--team-shadow);
+  box-shadow: var(--shadow);
   border-radius: 0 0 4px 4px;
 }
 
@@ -596,8 +592,8 @@ body {
 }
 
 .specialists-icon {
-  fill: #afb1b8;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: var(--color-icon);
+  transition: fill var(--transition-duration) var(--transition-timing-function);
 }
 
 .team {
@@ -665,7 +661,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #afb1b8;
+  border: 1px solid var(--color-icon);
   border-radius: 4px;
   transition: border-color var(--transition-duration) var(--transition-timing-function), background-color var(--transition-duration) var(--transition-timing-function);
 }
@@ -685,7 +681,7 @@ body {
 }
 
 .clients-icon {
-  fill: #afb1b8;
+  fill: var(--color-icon);
   transition-property: fill;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
@@ -755,7 +751,7 @@ body {
 .footer-link {
   width: 44px;
   height: 44px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--rgba-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -819,7 +815,7 @@ body {
   line-height: 1.25;
   letter-spacing: 0.03em;
   text-align: left;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--rgba-color);
   background-color: var(--bg-color2);
   padding-top: 15px;
   padding-bottom: 15px;
@@ -906,7 +902,7 @@ body {
 .button:hover, .button:focus {
   color: var(--white-color);
   background-color: var(--accent-color);
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--btn-shadow);
 }
 
 .portfolio {
