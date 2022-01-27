@@ -1,6 +1,5 @@
 .shadow {
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow);
   border-radius: 0 0 4px 4px;
 }
 .specialists {
@@ -10,15 +9,10 @@
   border-radius: 0 0 4px 4px;
 }
 
-.specialists-link:hover,
-.specialists-link:focus {
-  background-color: var(--accent-color);
-}
-
-.specialists-link:hover .specialists-icon,
-.specialists-link:focus .specialists-icon {
-  fill: #ffffff;
-}
+//  .specialists-link:hover .specialists-icon,
+// .specialists-link:focus .specialists-icon {
+//  fill: var(--white-color);
+// // }
 
 .specialists-link {
   width: 44px;
@@ -31,6 +25,13 @@
   transition-property: background-color;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    .specialists-icon {
+      fill: var(--white-color);
+    }
+  }
 }
 
 .specialists-list {
@@ -41,9 +42,10 @@
 .specialists-item + .specialists-item {
   margin-left: 10px;
 }
+
 .specialists-icon {
-  fill: #afb1b8;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: var(--color-icon);
+  transition: fill var(--transition-duration) var(--transition-timing-function);
 }
 
 .team {

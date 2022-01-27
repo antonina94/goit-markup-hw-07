@@ -43,17 +43,16 @@
   transition-property: color;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
-}
-
-.adress-link:hover,
-.adress-link:focus {
-  color: var(--accent-color);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
 .footer-link {
   width: 44px;
   height: 44px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--rgba-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,6 +60,10 @@
   transition-property: background-color;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
 }
 
 .footer-list {
@@ -72,17 +75,12 @@
   margin-right: 10px;
 }
 
-.footer-link:hover,
-.footer-link:focus {
-  background-color: var(--accent-color);
-}
-
 .footer-icon {
-  fill: #ffffff;
+  fill: var(--white-color);
 }
 
 .footer-text {
-  color: #ffffff;
+  color: var(--white-color);
   font-weight: 700;
   margin-bottom: 20px;
 }
@@ -97,7 +95,7 @@
 }
 
 .subscription-label {
-  color: #ffffff;
+  color: var(--white-color);
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
@@ -116,7 +114,7 @@
   line-height: 1.25;
   letter-spacing: 0.03em;
   text-align: left;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--rgba-color);
   background-color: var(--bg-color2);
   padding-top: 15px;
   padding-bottom: 15px;
@@ -131,8 +129,8 @@
 
 .subscription-submit {
   background: var(--accent-color);
-  color: #ffffff;
-  fill: #ffffff;
+  color: var(--white-color);
+  fill: var(--white-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   font-family: inherit;
   font-size: 16px;
@@ -152,11 +150,10 @@
   transition-property: background-color;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
-}
-
-.subscription-submit:hover,
-.subscription-submit:focus {
-  background-color: var(--btn-hover-color);
+  &:hover,
+  &:focus {
+    background-color: var(--btn-hover-color);
+  }
 }
 
 .subscription-text {

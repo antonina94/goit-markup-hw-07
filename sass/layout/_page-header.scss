@@ -34,6 +34,8 @@
 /* header-nav */
 
 .header-link {
+  position: relative;
+  display: flex;
   color: var(--primary-text-color);
   letter-spacing: 0.02em;
   font-weight: 500;
@@ -45,63 +47,45 @@
   transition-property: color;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
-}
-
-.header-link:hover,
-.header-link:focus {
-  color: var(--accent-color);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
 .header-link.current {
   color: var(--accent-color);
+  &::after {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    content: '';
+    width: 48px;
+    height: 4px;
+    background: #2196f3;
+    border-radius: 2px;
+    display: flex;
+    width: 100%;
+  }
 }
 
 .header-item:not(:last-child) {
   margin-right: 50px;
 }
 
-.header-link {
-  position: relative;
-  display: flex;
-}
-
-.header-link.current::after {
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  content: '';
-  width: 48px;
-  height: 4px;
-  background: #2196f3;
-  border-radius: 2px;
-  display: flex;
-  width: 100%;
-}
-
 .heder-contact-item:not(:last-child) {
   margin-right: 30px;
 }
 
-.contact-icon {
+.header-contact-icon {
   margin-right: 10px;
-  fill: #757575;
+  fill: var(--secondery-text-color);
   transition-property: fill;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
 }
 
-.header-auth-nav:hover,
-.header-auth-nav:focus {
-  color: var(--accent-color);
-}
-
-.header-auth-nav:hover .contact-icon,
-.header-auth-nav:focus .contact-icon {
-  fill: var(--accent-color);
-}
-
-/*header-auth-nav */
-.header-auth-nav {
+.header-contact-link {
   color: var(--secondery-text-color);
   letter-spacing: 0.02em;
   font-weight: 500;
@@ -112,9 +96,11 @@
   transition-property: color;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
-}
-
-.header-auth-nav:hover,
-.header-auth-nav:focus {
-  color: var(--accent-color);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    .header-contact-icon {
+      fill: var(--accent-color);
+    }
+  }
 }
