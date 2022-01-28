@@ -1,7 +1,7 @@
-.footer-left {
+.footer-block {
   margin-right: 85px;
 }
-.adress {
+.footer-block__adress {
   margin-top: 20px;
 }
 
@@ -19,17 +19,17 @@
   color: var(--white-color);
 }
 
-.adress-text {
+.footer-block__text {
   color: var(--white-color);
   font-style: normal;
   margin-bottom: 9px;
 }
 
-.adress-item:not(:last-child) {
+.footer-block__item:not(:last-child) {
   margin-bottom: 9px;
 }
 
-.adress-link {
+.footer-block__link {
   color: var(--rgba-color);
   font-style: normal;
   transition-property: color;
@@ -41,14 +41,8 @@
   }
 }
 
-.footer-link {
-  width: 44px;
-  height: 44px;
+.footer-list__link {
   background-color: rgba(255, 255, 255, 0.1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
   transition-property: background-color;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
@@ -63,15 +57,15 @@
   justify-content: center;
 }
 
-.footer-item:not(:last-child) {
+.footer-list__item:not(:last-child) {
   margin-right: 10px;
 }
 
-.footer-icon {
+.footer-list__icon {
   fill: var(--white-color);
 }
 
-.footer-text {
+.footer-associate__text {
   color: var(--white-color);
   font-weight: 700;
   margin-bottom: 20px;
@@ -81,18 +75,18 @@
   align-items: baseline;
 }
 
-.footer-center {
+.footer-associate {
   margin-right: 93px;
   display: block;
 }
 
 .subscription-label {
   color: var(--white-color);
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
+  @include font(14px, 700, 1.14, 0.03em);
+  // font-size: 14px;
+  // font-weight: 700;
+  // line-height: 1.14;
+  // letter-spacing: 0.03em;
   text-align: left;
   font-family: inherit;
   display: block;
@@ -100,11 +94,11 @@
 }
 .subscription-input {
   font-family: inherit;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
+  @include font(16px, 400, 1.25, 0.03em);
+  // font-size: 16px;
+  // font-weight: 400;
+  // line-height: 1.25;
+  // letter-spacing: 0.03em;
   text-align: left;
   color: var(--rgba-color);
   background-color: var(--bg-color2);
@@ -136,7 +130,7 @@
   }
 }
 
-.subscription-text {
+.subscription-submit__text {
   margin-right: 10px;
 }
 

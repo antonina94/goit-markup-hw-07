@@ -36,7 +36,7 @@
   padding: 40px;
 }
 
-.modal-button {
+.modal__button {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -50,13 +50,13 @@
   border: 1px solid #0000001a;
   &:hover,
   &:focus {
-    .button-vector {
+    .button__vector {
       fill: var(--accent-color);
     }
   }
 }
 
-.button-vector {
+.button__vector {
   fill: #000000;
   transition-property: fill;
   transition-duration: var(--transition-duration);
@@ -65,7 +65,7 @@
 
 /* ---------------------------------------------------------Формы */
 
-.modal-title {
+.modal-form__title {
   font-family: inherit;
   @include font(20px, 700, 1.15, 0.03em);
   // font-size: 20px;
@@ -97,31 +97,31 @@
   }
 }
 
-.form-label {
+.modal-form__label {
   margin-bottom: 10px;
   position: relative;
   display: flex;
   flex-direction: column;
 }
 
-.form-span {
+.modal-form__span {
   font-family: inherit;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
+  @include font(12px, null, 1.17, 0.01em);
+  // font-weight: normal;
+  // font-size: 12px;
+  // line-height: 1.17;
+  // letter-spacing: 0.01em;
   color: var(--secondery-text-color);
   margin-bottom: 4px;
 }
 
 .form-text {
   font-family: inherit;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
+  @include font(12px, 400, 1.17, 0.01em);
+  // font-size: 12px;
+  // font-weight: 400;
+  // line-height: 1.17;
+  // letter-spacing: 0.01em;
   text-align: left;
   width: 100%;
   height: 120px;
@@ -153,7 +153,7 @@
   }
 }
 
-.form-icon-name {
+.form-input__icon {
   position: absolute;
   display: block;
   top: 50%;
@@ -162,7 +162,7 @@
   transition-property: fill;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
-  .form-label:focus-within & {
+  .modal-form__label:focus-within & {
     fill: var(--accent-color);
   }
 }
@@ -200,6 +200,6 @@
   .input-agreement:checked + & {
     border: transparent;
     background-color: var(--accent-color);
-    fill: #ffffff;
+    fill: var(--white-color);
   }
 }
