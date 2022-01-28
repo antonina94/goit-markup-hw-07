@@ -19,30 +19,32 @@
   justify-content: center;
 }
 
-.about-icon-item:not(:last-child) {
+.about-icon-list__item:not(:last-child) {
   margin-right: 30px;
 }
 
 .about-list {
   display: flex;
 }
-.about-item:not(:last-child) {
+.about-list__item:not(:last-child) {
   margin-right: 30px;
   max-width: 270px;
 }
 
-.about-title {
-  letter-spacing: 0.03em;
-  font-size: 14px;
-  line-height: 1.14;
-  font-weight: 700;
+.about-list__title {
   text-transform: uppercase;
+  @include font(14px, 700, 1.4, 0.03em);
   margin-bottom: 10px;
+  // font-size: 14px;
+  // font-weight: 700;
+  // line-height: 1.14;
+  // letter-spacing: 0.03em;
 }
 
-.about-text {
+.about-list__text {
   color: var(--secondery-text-color);
-  letter-spacing: 0.03em;
-  font-size: 14px;
-  line-height: 1.71;
+  @include font(14px, null, 1.71, 0.03em);
+  // letter-spacing: 0.03em;
+  // font-size: 14px;
+  // line-height: 1.71;
 }

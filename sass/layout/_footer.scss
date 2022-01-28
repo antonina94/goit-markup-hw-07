@@ -6,25 +6,17 @@
 }
 
 .footer {
-  letter-spacing: 0.03em;
-  font-size: 14px;
-  line-height: 1.71;
   background-color: var(--bg-color2);
+  @include font(14px, null, 1.71, 0.03em);
   padding-top: 60px;
   padding-bottom: 60px;
+  //  letter-spacing: 0.03em;
+  // font-size: 14px;
+  // line-height: 1.71;
 }
 
-.footer-logo {
+.footer__logo {
   color: var(--white-color);
-  font-family: 'Raleway', sans-serif;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-  font-weight: 700;
-}
-
-.footer-logo .accent {
-  color: var(--accent-color);
 }
 
 .adress-text {
@@ -52,7 +44,7 @@
 .footer-link {
   width: 44px;
   height: 44px;
-  background-color: var(--rgba-color);
+  background-color: rgba(255, 255, 255, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -128,21 +120,9 @@
 }
 
 .subscription-submit {
-  background: var(--accent-color);
-  color: var(--white-color);
   fill: var(--white-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.9;
-  letter-spacing: 0.06em;
   text-align: center;
   margin-left: 12px;
-  width: 200px;
-  height: 50px;
-  border: none;
-  border-radius: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
